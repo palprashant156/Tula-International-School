@@ -1,5 +1,4 @@
 import Reveal from '../ui/Reveal.jsx'
-import SmartImage from '../ui/SmartImage.jsx'
 
 export default function Hero({ onTourOpen }) {
   return (

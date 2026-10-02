@@ -2,8 +2,13 @@ export default function TourModal({ open, onClose }) {
   if (!open) return null
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/60 backdrop-blur-md p-4">
-      <div className="bg-surface-card rounded-2xl max-w-2xl w-full p-space-lg shadow-2xl flex flex-col gap-space-md">
+    <div
+      aria-label="Virtual campus walkthrough"
+      aria-modal="true"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/60 backdrop-blur-md p-4 modal-scrim"
+      role="dialog"
+    >
+      <div className="bg-surface-card rounded-2xl max-w-2xl w-full p-space-lg shadow-2xl flex flex-col gap-space-md modal-card">
         <div className="flex items-center justify-between pb-space-xs">
           <div className="flex items-center gap-2">
             <span className="material-symbols-outlined text-primary">streetview</span>

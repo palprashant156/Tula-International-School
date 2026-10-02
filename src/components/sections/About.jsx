@@ -1,4 +1,5 @@
 import Reveal from '../ui/Reveal.jsx'
+import SectionTag from '../ui/SectionTag.jsx'
 import SmartImage from '../ui/SmartImage.jsx'
 
 export default function About() {
@@ -31,7 +32,7 @@ export default function About() {
     <Reveal className="lg:col-span-6 flex flex-col gap-space-md" delay={120}>
     <div className="flex items-center gap-2">
     <span className="h-0.5 w-8 bg-secondary-container"></span>
-    <span className="font-label-caps text-label-caps text-secondary uppercase font-bold tracking-widest">Modern Gurukul Philosophy</span>
+    <SectionTag>Modern Gurukul Philosophy</SectionTag>
     </div>
     <h2 className="font-headline-lg text-headline-lg text-primary tracking-tight">
                 “We feel supported in what we do and nudged further to do more.”

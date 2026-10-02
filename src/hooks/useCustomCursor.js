@@ -10,13 +10,11 @@ export default function useCustomCursor() {
     let y = -100
     const paint = () => {
       raf = 0
-      if (dotRef.current) {
-        dotRef.current.style.left = `${x}px`
-        dotRef.current.style.top = `${y}px`
-      }
-      if (ringRef.current) {
-        ringRef.current.style.left = `${x}px`
-        ringRef.current.style.top = `${y}px`
+      const transform = `translate(${x}px, ${y}px) translate(-50%, -50%)`
+      for (const el of [dotRef.current, ringRef.current]) {
+        if (!el) continue
+        el.style.transform = transform
+        el.style.opacity = '1'
       }
     }
     const onMove = (e) => {

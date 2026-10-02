@@ -1,4 +1,4 @@
-/* Base */
+
 html, body {
   margin: 0;
   padding: 0;
@@ -19,17 +19,26 @@ main > :last-child { margin-bottom: 0 !important; }
   .custom-cursor {
     pointer-events: none;
     position: fixed;
+    top: 0;
+    left: 0;
     z-index: 9999;
+    opacity: 0;
     transition: transform 0.1s ease-out;
     transform: translate(-50%, -50%);
   }
 }
 
-/* ------------------------------------------------------------------
-   Fallback utilities mirroring the Stitch tailwind.config.
-   These guarantee header/nav/footer alignment even if the Tailwind
-   Play CDN is slow or blocked. Values match index.html config.
-------------------------------------------------------------------- */
+@keyframes modal-fade { from { opacity: 0; } to { opacity: 1; } }
+@keyframes modal-rise {
+  from { opacity: 0; transform: translateY(18px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}
+.modal-scrim { animation: modal-fade 0.25s ease both; }
+.modal-card { animation: modal-rise 0.32s cubic-bezier(0.22, 0.61, 0.36, 1) both; }
+@media (prefers-reduced-motion: reduce) {
+  .modal-scrim, .modal-card { animation: none; }
+}
+
 :root {
   --surface: #faf8ff;
   --surface-card: #FFFFFF;
@@ -62,7 +71,6 @@ main > :last-child { margin-bottom: 0 !important; }
   --margin-mobile: 1.25rem;
 }
 
-/* Colors */
 .bg-surface { background-color: var(--surface); }
 .bg-surface-card { background-color: var(--surface-card); }
 .bg-surface-parchment { background-color: var(--surface-parchment); }
@@ -105,7 +113,6 @@ main > :last-child { margin-bottom: 0 !important; }
 .border-primary-container\/40 { border-color: rgba(22, 91, 50, 0.4); }
 .accent-primary-container { accent-color: var(--primary-container); }
 
-/* Spacing */
 .p-space-xs { padding: var(--space-xs); }
 .p-space-sm { padding: var(--space-sm); }
 .p-space-md { padding: var(--space-md); }
@@ -135,7 +142,6 @@ main > :last-child { margin-bottom: 0 !important; }
   .lg\:p-space-xl { padding: var(--space-xl); }
 }
 
-/* Typography */
 .font-display, .font-headline-lg, .font-headline-md, .font-headline-sm,
 .font-body-lg, .font-body-md, .font-body-sm,
 .font-label-lg, .font-label-md, .font-label-caps, .font-stat-metric {
@@ -156,9 +162,6 @@ main > :last-child { margin-bottom: 0 !important; }
 .text-quote-editorial-mobile { font-size: 1.125rem; line-height: 1.875rem; font-family: 'Noto Serif', Georgia, serif; }
 .text-stat-metric { font-size: 3rem; line-height: 3.25rem; font-weight: 800; }
 
-/* ------------------------------------------------------------------
-   Structural alignment: header / navbar / footer
-------------------------------------------------------------------- */
 header {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -179,15 +182,14 @@ header > div {
 main { display: block; width: 100%; padding-top: 5rem; }
 footer > div { max-width: 1320px; margin-left: auto; margin-right: auto; }
 
-/* Responsive nav fallbacks (mirror hidden / xl:flex / xl:hidden etc.) */
 header nav { display: none; flex-wrap: nowrap; }
 header nav a { white-space: nowrap; flex-shrink: 0; }
 @media (min-width: 1280px) {
   header nav { display: flex !important; }
-  header button { display: none !important; }
+  header button[aria-label="Toggle Navigation Menu"] { display: none !important; }
+  .xl\:px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
 }
 
-/* Images: never overflow, keep aspect, hide broken gracefully */
 img {
   max-width: 100%;
   font-size: 0.75rem;
@@ -201,13 +203,10 @@ img[src="/logo.png"] {
 }
 footer img[src="/logo.png"] { height: 3rem; }
 
-/* Background-image sections need a fallback tone + min height so
-   nothing collapses while remote art loads */
 .bg-cover { background-size: cover; }
 .bg-center { background-position: center; }
 section { position: relative; }
 
-/* Material symbols */
 .material-symbols-outlined {
   font-family: 'Material Symbols Outlined', sans-serif;
   font-weight: normal;
@@ -219,15 +218,13 @@ section { position: relative; }
   flex-shrink: 0;
 }
 
-/* Custom cursor hover reaction */
-.cursor-ring { transition: scale 0.25s ease, background-color 0.25s ease; }
+.cursor-ring { transition: transform 0.18s ease-out, scale 0.25s ease, background-color 0.25s ease; }
 .cursor-ring.is-hovering {
   scale: 1.7;
   background-color: rgba(254, 174, 44, 0.16);
 }
 .cursor-dot.is-hovering { scale: 0.5; }
 
-/* Scroll-triggered reveals */
 .reveal {
   opacity: 0;
   transform: translateY(26px);
@@ -252,3 +249,38 @@ section { position: relative; }
 @media (prefers-reduced-motion: reduce) {
   .reveal, .reveal-group > * { opacity: 1 !important; transform: none !important; transition: none; }
 }
+
+.dark { color-scheme: dark; }
+.dark body { background: #0b120e; color: #e9ede9; }
+.dark header { background: rgba(11, 18, 14, 0.88); }
+.dark .bg-surface { background-color: #0b120e; }
+.dark .bg-surface\/90 { background-color: rgba(11, 18, 14, 0.9); }
+.dark .bg-surface-card { background-color: #131b16; }
+.dark .bg-surface-parchment { background-color: #0f1611; }
+.dark .bg-surface-container { background-color: #1a241f; }
+.dark .bg-surface-container-high { background-color: #1e2a24; }
+.dark .bg-surface-container-low { background-color: #16201a; }
+.dark .bg-surface-dim { background-color: #1a241f; }
+.dark .bg-surface-variant { background-color: #223028; }
+.dark .bg-white { background-color: #1e2a24; }
+.dark .bg-primary\/10 { background-color: rgba(173, 243, 188, 0.12); }
+.dark .bg-primary\/5 { background-color: rgba(173, 243, 188, 0.07); }
+.dark .hover\:bg-surface-container:hover { background-color: #1a241f; }
+.dark .hover\:bg-surface-container-low:hover { background-color: #1a241f; }
+.dark .hover\:bg-surface-container-high:hover { background-color: #22352a; }
+.dark .hover\:bg-surface-variant:hover { background-color: #223028; }
+.dark .text-on-surface { color: #e9ede9; }
+.dark .text-on-surface-variant { color: #b7c1ba; }
+.dark .text-text-muted { color: #9aa5a0; }
+.dark .text-primary { color: #abe0b9; }
+.dark .text-primary-container { color: #7bd88f; }
+.dark .text-secondary { color: #e8b04b; }
+.dark .text-emerald-vivid { color: #5cbf7e; }
+.dark .hover\:text-primary:hover { color: #abe0b9; }
+.dark .hover\:text-emerald-vivid:hover { color: #5cbf7e; }
+.dark .border-border-tactile { border-color: #2a352e; }
+
+.dark .bg-secondary-container .text-on-surface { color: #131b2e; }
+.dark .bg-amber-soft .text-secondary { color: #6b4500; }
+
+.dark img[src="/logo.png"] { background: #fff; border-radius: 10px; padding: 3px; }

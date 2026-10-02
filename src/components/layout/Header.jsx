@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { contact, navLinks } from '../../data/site.js'
 import SmartImage from '../ui/SmartImage.jsx'
+import ThemeToggle from './ThemeToggle.jsx'
 
 const NAV_HREFS = {
   'about-tis': '#about',
@@ -24,7 +25,7 @@ export default function Header() {
   return (
     <>
       <header className="fixed top-0 w-full z-40 bg-surface/90 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
-        <div className="h-20 max-w-[1320px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md">
+        <div className="h-20 max-w-[1320px] mx-auto px-margin-mobile lg:px-margin xl:px-6 2xl:px-margin flex items-center justify-between gap-space-md">
           <div className="flex items-center gap-space-sm">
             <a className="flex items-center gap-space-sm group" href="#top">
               <SmartImage
@@ -34,7 +35,7 @@ export default function Header() {
                 src="/logo.png"
               />
               <div className="flex flex-col">
-                <span className="font-headline-sm text-headline-sm text-primary tracking-tight group-hover:text-emerald-vivid transition-colors whitespace-nowrap">
+                <span className="font-headline-sm text-headline-sm xl:text-[19px] xl:leading-[26px] 2xl:text-headline-sm text-primary tracking-tight group-hover:text-emerald-vivid transition-colors whitespace-nowrap">
                   Tula&apos;s International School
                 </span>
                 <span className="font-label-caps text-label-caps text-text-muted tracking-wider">
@@ -69,6 +70,7 @@ export default function Header() {
               <span>Enquire Now</span>
               <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
             </a>
+            <ThemeToggle />
             <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm shrink-0">
               <span className="material-symbols-outlined text-on-primary text-[18px]">person</span>
             </div>
@@ -85,7 +87,7 @@ export default function Header() {
       </header>
 
       {!open ? null : (
-        <div className="fixed inset-0 z-50">
+        <div aria-label="Site navigation" className="fixed inset-0 z-50" role="dialog">
           <div
             className="absolute inset-0 bg-inverse-surface/40 backdrop-blur-sm"
             onClick={() => setOpen(false)}

@@ -1,6 +1,3 @@
-// Shared site content extracted from the Google Stitch design.
-// Project: TIS Modern Homepage Redesign (Stitch MCP).
-
 export const navLinks = [{"label": "About TIS", "path": "about-tis"}, {"label": "Academics", "path": "academics"}, {"label": "Boarding Life", "path": "boarding-life"}, {"label": "Sports & Arts", "path": "sports-arts"}, {"label": "Achievements", "path": "achievements"}, {"label": "Admissions", "path": "admissions"}];
 
 export const contact = {"phone": "+91-9837983791", "phoneHref": "tel:+919837983791", "landline": "0135-2699444, 2699666", "address": "Dhoolkot, P.O – Selaqui, Chakrata Road, Dehradun – 248011 (Uttarakhand)", "email": "info@tis.edu.in"};

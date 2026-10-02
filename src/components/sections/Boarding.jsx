@@ -1,12 +1,12 @@
-import SmartImage from '../ui/SmartImage.jsx'
 import { RevealGroup } from '../ui/Reveal.jsx'
+import SectionTag from '../ui/SectionTag.jsx'
 
 export default function Boarding() {
   return (
     <section className="w-full py-space-xl lg:py-24 bg-surface-parchment" id="boarding">
     <div className="max-w-[1320px] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-xl">
     <div className="max-w-2xl flex flex-col gap-2">
-    <span className="font-label-caps text-label-caps text-secondary uppercase font-bold tracking-widest">A True Home in the Hills</span>
+    <SectionTag>A True Home in the Hills</SectionTag>
     <h2 className="font-headline-lg text-headline-lg text-primary tracking-tight">Residential Life Built on Care, Warmth &amp; Health</h2>
     </div>
     <RevealGroup className="grid grid-cols-1 md:grid-cols-3 gap-space-lg">

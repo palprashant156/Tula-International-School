@@ -1,5 +1,5 @@
-import SmartImage from '../ui/SmartImage.jsx'
 import { RevealGroup } from '../ui/Reveal.jsx'
+import SectionTag from '../ui/SectionTag.jsx'
 
 export default function Mentors() {
   return (
@@ -7,7 +7,7 @@ export default function Mentors() {
     <div className="max-w-[1320px] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-xl">
     <div className="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
     <div>
-    <span className="font-label-caps text-label-caps text-secondary uppercase font-bold tracking-widest">Inspiring Greatness</span>
+    <SectionTag>Inspiring Greatness</SectionTag>
     <h2 className="font-headline-lg text-headline-lg text-primary tracking-tight">National Icons &amp; Mentors On Campus</h2>
     </div>
     <p className="font-body-md text-body-md text-text-muted max-w-md">

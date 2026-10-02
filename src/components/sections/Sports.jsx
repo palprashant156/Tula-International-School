@@ -1,5 +1,7 @@
-import SmartImage from '../ui/SmartImage.jsx'
+import { sportsPills } from '../../data/site.js'
 import { RevealGroup } from '../ui/Reveal.jsx'
+import SectionTag from '../ui/SectionTag.jsx'
+import SmartImage from '../ui/SmartImage.jsx'
 
 export default function Sports() {
   return (
@@ -7,7 +9,7 @@ export default function Sports() {
     <div className="max-w-[1320px] mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-xl">
     <div className="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
     <div>
-    <span className="font-label-caps text-label-caps text-secondary uppercase font-bold tracking-widest">Athletics &amp; Expression</span>
+    <SectionTag>Athletics &amp; Expression</SectionTag>
     <h2 className="font-headline-lg text-headline-lg text-primary tracking-tight">16+ Olympic Sports &amp; The Arts</h2>
     </div>
     <p className="font-body-md text-body-md text-text-muted max-w-md">
@@ -47,70 +49,19 @@ export default function Sports() {
     <div className="p-space-lg rounded-2xl bg-surface-card shadow-sm flex flex-col gap-space-md">
     <span className="font-label-caps text-label-caps text-secondary uppercase font-bold tracking-widest">Active Sports Infrastructure On Campus</span>
     <RevealGroup className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-3">
-    <div className="flex items-center gap-2 p-2.5 rounded-lg bg-surface-parchment hover:bg-surface-container transition-colors">
-    <span className="material-symbols-outlined text-[18px] text-primary">arrow_warm_up</span>
-    <span className="font-label-sm text-[13px] font-semibold text-primary">Archery</span>
-    </div>
-    <div className="flex items-center gap-2 p-2.5 rounded-lg bg-surface-parchment hover:bg-surface-container transition-colors">
-    <span className="material-symbols-outlined text-[18px] text-primary">pool</span>
-    <span className="font-label-sm text-[13px] font-semibold text-primary">Swimming</span>
-    </div>
-    <div className="flex items-center gap-2 p-2.5 rounded-lg bg-surface-parchment hover:bg-surface-container transition-colors">
-    <span className="material-symbols-outlined text-[18px] text-primary">sports_tennis</span>
-    <span className="font-label-sm text-[13px] font-semibold text-primary">Lawn Tennis</span>
-    </div>
-    <div className="flex items-center gap-2 p-2.5 rounded-lg bg-surface-parchment hover:bg-surface-container transition-colors">
-    <span className="material-symbols-outlined text-[18px] text-primary">sports_cricket</span>
-    <span className="font-label-sm text-[13px] font-semibold text-primary">Cricket</span>
-    </div>
-    <div className="flex items-center gap-2 p-2.5 rounded-lg bg-surface-parchment hover:bg-surface-container transition-colors">
-    <span className="material-symbols-outlined text-[18px] text-primary">sports_soccer</span>
-    <span className="font-label-sm text-[13px] font-semibold text-primary">Football</span>
-    </div>
-    <div className="flex items-center gap-2 p-2.5 rounded-lg bg-surface-parchment hover:bg-surface-container transition-colors">
-    <span className="material-symbols-outlined text-[18px] text-primary">sports_martial_arts</span>
-    <span className="font-label-sm text-[13px] font-semibold text-primary">Taekwondo</span>
-    </div>
-    <div className="flex items-center gap-2 p-2.5 rounded-lg bg-surface-parchment hover:bg-surface-container transition-colors">
-    <span className="material-symbols-outlined text-[18px] text-primary">center_focus_strong</span>
-    <span className="font-label-sm text-[13px] font-semibold text-primary">Shooting</span>
-    </div>
-    <div className="flex items-center gap-2 p-2.5 rounded-lg bg-surface-parchment hover:bg-surface-container transition-colors">
-    <span className="material-symbols-outlined text-[18px] text-primary">sports_basketball</span>
-    <span className="font-label-sm text-[13px] font-semibold text-primary">Basketball</span>
-    </div>
-    <div className="flex items-center gap-2 p-2.5 rounded-lg bg-surface-parchment hover:bg-surface-container transition-colors">
-    <span className="material-symbols-outlined text-[18px] text-primary">sports_volleyball</span>
-    <span className="font-label-sm text-[13px] font-semibold text-primary">Volleyball</span>
-    </div>
-    <div className="flex items-center gap-2 p-2.5 rounded-lg bg-surface-parchment hover:bg-surface-container transition-colors">
-    <span className="material-symbols-outlined text-[18px] text-primary">directions_bike</span>
-    <span className="font-label-sm text-[13px] font-semibold text-primary">Cycling</span>
-    </div>
-    <div className="flex items-center gap-2 p-2.5 rounded-lg bg-surface-parchment hover:bg-surface-container transition-colors">
-    <span className="material-symbols-outlined text-[18px] text-primary">sports_hockey</span>
-    <span className="font-label-sm text-[13px] font-semibold text-primary">Hockey</span>
-    </div>
-    <div className="flex items-center gap-2 p-2.5 rounded-lg bg-surface-parchment hover:bg-surface-container transition-colors">
-    <span className="material-symbols-outlined text-[18px] text-primary">sports</span>
-    <span className="font-label-sm text-[13px] font-semibold text-primary">Squash</span>
-    </div>
-    <div className="flex items-center gap-2 p-2.5 rounded-lg bg-surface-parchment hover:bg-surface-container transition-colors">
-    <span className="material-symbols-outlined text-[18px] text-primary">sports_tennis</span>
-    <span className="font-label-sm text-[13px] font-semibold text-primary">Badminton</span>
-    </div>
-    <div className="flex items-center gap-2 p-2.5 rounded-lg bg-surface-parchment hover:bg-surface-container transition-colors">
-    <span className="material-symbols-outlined text-[18px] text-primary">sports_score</span>
-    <span className="font-label-sm text-[13px] font-semibold text-primary">Billiards</span>
-    </div>
-    <div className="flex items-center gap-2 p-2.5 rounded-lg bg-surface-parchment hover:bg-surface-container transition-colors">
-    <span className="material-symbols-outlined text-[18px] text-primary">maps_ar</span>
-    <span className="font-label-sm text-[13px] font-semibold text-primary">Table Tennis</span>
-    </div>
-    <div className="flex items-center gap-2 p-2.5 rounded-lg bg-surface-parchment hover:bg-surface-container transition-colors">
-    <span className="material-symbols-outlined text-[18px] text-primary">sports_gymnastics</span>
-    <span className="font-label-sm text-[13px] font-semibold text-primary">Horse Riding</span>
-    </div>
+      {sportsPills.map((sport) => (
+        <div
+          key={sport.label}
+          className="flex items-center gap-2 p-2.5 rounded-lg bg-surface-parchment hover:bg-surface-container transition-colors"
+        >
+          <span className="material-symbols-outlined text-[18px] text-primary">
+            {sport.icon}
+          </span>
+          <span className="font-label-sm text-[13px] font-semibold text-primary">
+            {sport.label}
+          </span>
+        </div>
+      ))}
     </RevealGroup>
     </div>
     </div>
