@@ -1,3 +1,4 @@
+import Reveal from '../ui/Reveal.jsx'
 import SmartImage from '../ui/SmartImage.jsx'
 
 export default function About() {
@@ -6,7 +7,7 @@ export default function About() {
     <div className="max-w-[1320px] mx-auto px-margin-mobile lg:px-margin">
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
 
-    <div className="lg:col-span-6 relative">
+    <Reveal className="lg:col-span-6 relative">
     <div className="relative rounded-2xl overflow-hidden shadow-xl bg-surface-card">
     <SmartImage className="w-full h-[460px] object-cover hover:scale-105 transition-transform duration-700" data-alt="Diverse group of cheerful secondary school students at Tula's International School wearing navy blue school blazers and ties in an advanced robotics and engineering workshop. Students assemble and code an autonomous rover together around a wooden workbench under warm afternoon sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfBBm0uaKD0Lp_1wDSJeseS7YSeOHlRW8Qy1MFQR0_nkkQF6sPQz8jQmwGm3d6gs22UYh8HqCaB6sKP9agYXn3PzT4zIBFgHklBl1m-GiyNYjES19xRDEKoucLtq_YqOe9NIGImgeVR2XcjNtxYi3VmHGPfPGwn9NZ5D-1kyy9bbLu_R_ZNz8sGu9L2dVGTYW9PHCTEin_sfRMWlMOXPg24SrJfaOaOenQ4I6_awu9gmgg0b4eWGpOKQ"/>
     <div className="absolute bottom-0 inset-x-0 p-space-lg bg-gradient-to-t from-inverse-surface via-inverse-surface/80 to-transparent text-white">
@@ -25,9 +26,9 @@ export default function About() {
     <p className="font-label-caps text-label-caps text-text-muted">Rishabh Educational Trust</p>
     </div>
     </div>
-    </div>
+    </Reveal>
 
-    <div className="lg:col-span-6 flex flex-col gap-space-md">
+    <Reveal className="lg:col-span-6 flex flex-col gap-space-md" delay={120}>
     <div className="flex items-center gap-2">
     <span className="h-0.5 w-8 bg-secondary-container"></span>
     <span className="font-label-caps text-label-caps text-secondary uppercase font-bold tracking-widest">Modern Gurukul Philosophy</span>
@@ -63,7 +64,7 @@ export default function About() {
     <span className="material-symbols-outlined text-[18px]">arrow_forward</span>
     </a>
     </div>
-    </div>
+    </Reveal>
     </div>
     </div>
     </section>

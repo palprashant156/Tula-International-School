@@ -1,10 +1,11 @@
 import { stats } from '../../data/site.js'
+import { RevealGroup } from '../ui/Reveal.jsx'
 
 export default function StatsBar() {
   return (
     <section className="w-full bg-surface-card py-space-xl relative z-10 shadow-sm">
       <div className="max-w-[1320px] mx-auto px-margin-mobile lg:px-margin">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-space-lg">
+        <RevealGroup className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-space-lg">
           {stats.map((stat) => (
             <div
               key={stat.eyebrow}
@@ -17,7 +18,7 @@ export default function StatsBar() {
               <span className="font-body-sm text-body-sm text-on-surface-variant">{stat.sub}</span>
             </div>
           ))}
-        </div>
+        </RevealGroup>
       </div>
     </section>
   )

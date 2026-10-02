@@ -1,3 +1,4 @@
+import Reveal from '../ui/Reveal.jsx'
 import SmartImage from '../ui/SmartImage.jsx'
 
 export default function Hero({ onTourOpen }) {
@@ -10,7 +11,7 @@ export default function Hero({ onTourOpen }) {
     <div className="absolute inset-0 bg-radial from-transparent via-emerald-deep/40 to-emerald-deep/90"></div>
 
     <div className="relative max-w-[1320px] mx-auto px-margin-mobile lg:px-margin pt-36 pb-20 lg:pt-44 lg:pb-28 flex flex-col justify-between min-h-[942px]">
-    <div className="max-w-4xl flex flex-col gap-space-lg">
+    <Reveal className="max-w-4xl flex flex-col gap-space-lg" delay={100}>
 
     <div className="inline-flex items-center gap-space-xs px-4 py-1.5 rounded-full bg-surface-card/10 backdrop-blur-md border border-white/20 self-start shadow-sm">
     <span className="inline-block w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
@@ -39,7 +40,7 @@ export default function Hero({ onTourOpen }) {
     <span>Helpline: +91-9837983791</span>
     </a>
     </div>
-    </div>
+    </Reveal>
 
     <div className="pt-space-xl mt-space-lg">
     <div className="p-space-md rounded-xl bg-surface-card/10 backdrop-blur-md border border-white/10 grid grid-cols-2 md:grid-cols-4 gap-space-md items-center">

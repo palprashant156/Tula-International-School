@@ -1,4 +1,5 @@
 import SmartImage from '../ui/SmartImage.jsx'
+import { RevealGroup } from '../ui/Reveal.jsx'
 
 export default function Sports() {
   return (
@@ -14,7 +15,7 @@ export default function Sports() {
             </p>
     </div>
 
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+    <RevealGroup className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
 
     <div className="lg:col-span-7 rounded-2xl overflow-hidden relative group shadow-md min-h-[380px]">
     <SmartImage className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Young school student in black riding jacket, equestrian helmet and boots trotting gracefully on a pedigree warmblood horse in outdoor sand dressage ring with lush green mountain hills and stone stables in background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlPgEEqp99CBZ1mqRAPLj8kN0blMee9vjEvIfIN6-NNDOZnTT9dGeNGYNruHfTtnhOzFXhA90rdgcKeDMJgkiVV2P8o7lnkL6BKX4ttpk4cgHSk304Tp-Pdla7FVpLYAzUr7HcdbMM77nMdo4T5kDq6lHkY2oD8dJS4C6KxKeA5tHNKlxrhWbZMF1EudAcQwZ9HPptSIZoVKoUb8BSPiRehkpQEfj0NXgC8k56XtrVkh_hlzF6pExmaQ"/>
@@ -41,11 +42,11 @@ export default function Sports() {
     <p className="font-body-sm text-body-sm text-surface-container-high/80 mt-1">Equipped with Steinway instruments, Indian classical kathak wings, and dynamic theatrical rigging.</p>
     </div>
     </div>
-    </div>
+    </RevealGroup>
 
     <div className="p-space-lg rounded-2xl bg-surface-card shadow-sm flex flex-col gap-space-md">
     <span className="font-label-caps text-label-caps text-secondary uppercase font-bold tracking-widest">Active Sports Infrastructure On Campus</span>
-    <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-3">
+    <RevealGroup className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-3">
     <div className="flex items-center gap-2 p-2.5 rounded-lg bg-surface-parchment hover:bg-surface-container transition-colors">
     <span className="material-symbols-outlined text-[18px] text-primary">arrow_warm_up</span>
     <span className="font-label-sm text-[13px] font-semibold text-primary">Archery</span>
@@ -110,7 +111,7 @@ export default function Sports() {
     <span className="material-symbols-outlined text-[18px] text-primary">sports_gymnastics</span>
     <span className="font-label-sm text-[13px] font-semibold text-primary">Horse Riding</span>
     </div>
-    </div>
+    </RevealGroup>
     </div>
     </div>
     </section>

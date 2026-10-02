@@ -1,4 +1,5 @@
 import { pillars } from '../../data/site.js'
+import { RevealGroup } from '../ui/Reveal.jsx'
 import SectionTag from '../ui/SectionTag.jsx'
 
 export default function Pillars() {
@@ -17,7 +18,7 @@ export default function Pillars() {
             national sports arenas, and civic leadership.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+        <RevealGroup className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
           {pillars.map((pillar) => (
             <div
               key={pillar.num}
@@ -39,7 +40,7 @@ export default function Pillars() {
               </div>
             </div>
           ))}
-        </div>
+        </RevealGroup>
       </div>
     </section>
   )

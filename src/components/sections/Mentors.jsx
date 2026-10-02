@@ -1,4 +1,5 @@
 import SmartImage from '../ui/SmartImage.jsx'
+import { RevealGroup } from '../ui/Reveal.jsx'
 
 export default function Mentors() {
   return (
@@ -13,7 +14,7 @@ export default function Mentors() {
               Tula’s scholars regularly interact directly with national icons, Olympic medalists, and visionary public leaders who visit Dehradun.
             </p>
     </div>
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
+    <RevealGroup className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-lg">
 
     <div className="p-space-md rounded-2xl bg-surface-card shadow-sm hover:shadow-md transition-shadow flex flex-col gap-3">
     <div className="w-12 h-12 rounded-full bg-secondary-container/20 flex items-center justify-center text-secondary font-bold">
@@ -57,8 +58,10 @@ export default function Mentors() {
     <p className="font-body-sm text-body-sm text-text-muted">
                 Asian Games Gold Medalist Abhishek Verma and 2024 World Archery Champion Aditi Gopichand Swami mentored our residential archery division.
               </p>
+
     </div>
-    </div>
+
+    </RevealGroup>
     </div>
     </section>
   )

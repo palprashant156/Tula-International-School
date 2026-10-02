@@ -1,4 +1,5 @@
 import { testimonialFeature, testimonials } from '../../data/site.js'
+import Reveal, { RevealGroup } from '../ui/Reveal.jsx'
 import SmartImage from '../ui/SmartImage.jsx'
 import SectionTag from '../ui/SectionTag.jsx'
 
@@ -31,7 +32,9 @@ export default function Testimonials() {
           </div>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
-          <div className="lg:col-span-5 rounded-2xl overflow-hidden shadow-md relative min-h-[380px]">
+          <Reveal
+            className="lg:col-span-5 rounded-2xl overflow-hidden shadow-md relative min-h-[380px]"
+          >
             <SmartImage
               alt={testimonialFeature.alt}
               className="w-full h-full object-cover"
@@ -50,8 +53,8 @@ export default function Testimonials() {
                 {testimonialFeature.sub}
               </p>
             </div>
-          </div>
-          <div className="lg:col-span-7 flex flex-col gap-space-md justify-between">
+          </Reveal>
+          <RevealGroup className="lg:col-span-7 flex flex-col gap-space-md justify-between">
             {testimonials.map((item) => (
             <figure
               key={item.name}
@@ -71,7 +74,7 @@ export default function Testimonials() {
               </figcaption>
             </figure>
             ))}
-          </div>
+          </RevealGroup>
         </div>
       </div>
     </section>

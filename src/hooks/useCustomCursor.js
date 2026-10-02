@@ -22,6 +22,11 @@ export default function useCustomCursor() {
     const onMove = (e) => {
       x = e.clientX
       y = e.clientY
+      const interactive =
+        e.target instanceof Element &&
+        e.target.closest('a, button, input, select, textarea, label, [role="button"]')
+      ringRef.current?.classList.toggle('is-hovering', Boolean(interactive))
+      dotRef.current?.classList.toggle('is-hovering', Boolean(interactive))
       if (!raf) raf = requestAnimationFrame(paint)
     }
     window.addEventListener('mousemove', onMove, { passive: true })

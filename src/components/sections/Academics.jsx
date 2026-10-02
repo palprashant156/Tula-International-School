@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { academicTabs } from '../../data/site.js'
+import Reveal from '../ui/Reveal.jsx'
 import SectionTag from '../ui/SectionTag.jsx'
 
 export default function Academics() {
@@ -40,8 +41,8 @@ export default function Academics() {
             </button>
           ))}
         </div>
-        <div className="p-space-xl rounded-2xl bg-surface-card shadow-sm">
-          <div className="flex flex-col lg:flex-row gap-space-xl items-center" key={active.id}>
+        <Reveal key={active.id} className="p-space-xl rounded-2xl bg-surface-card shadow-sm">
+          <div className="flex flex-col lg:flex-row gap-space-xl items-center">
             <div className="flex-1 flex flex-col gap-space-md">
               <span className="font-label-caps text-label-caps text-secondary font-bold">
                 {active.eyebrow}
@@ -66,7 +67,7 @@ export default function Academics() {
               />
             </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   )
