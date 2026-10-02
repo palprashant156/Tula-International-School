@@ -34,7 +34,7 @@ export default function Header() {
                 src="/logo.png"
               />
               <div className="flex flex-col">
-                <span className="font-headline-sm text-headline-sm text-primary tracking-tight group-hover:text-emerald-vivid transition-colors">
+                <span className="font-headline-sm text-headline-sm text-primary tracking-tight group-hover:text-emerald-vivid transition-colors whitespace-nowrap">
                   Tula&apos;s International School
                 </span>
                 <span className="font-label-caps text-label-caps text-text-muted tracking-wider">
@@ -43,11 +43,11 @@ export default function Header() {
               </div>
             </a>
           </div>
-          <nav className="hidden xl:flex items-center gap-space-lg">
+          <nav className="hidden xl:flex items-center gap-space-md 2xl:gap-space-lg flex-nowrap">
             {navLinks.map((link) => (
               <a
                 key={link.path}
-                className="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors"
+                className="whitespace-nowrap shrink-0 font-label-md 2xl:font-label-lg text-label-md 2xl:text-label-lg text-on-surface-variant hover:text-primary transition-colors"
                 href={NAV_HREFS[link.path] ?? '#'}
               >
                 {link.label}
@@ -56,20 +56,20 @@ export default function Header() {
           </nav>
           <div className="flex items-center gap-space-md">
             <a
-              className="hidden sm:flex items-center gap-space-xs text-primary hover:text-emerald-vivid font-label-md text-label-md transition-colors"
+              className="hidden sm:flex items-center gap-space-xs text-primary hover:text-emerald-vivid font-label-md text-label-md transition-colors whitespace-nowrap shrink-0"
               href={contact.phoneHref}
             >
               <span className="material-symbols-outlined text-[18px]">call</span>
-              <span className="hidden lg:inline">{contact.phone}</span>
+              <span className="hidden 2xl:inline">{contact.phone}</span>
             </a>
             <a
-              className="hidden md:inline-flex items-center justify-center gap-space-xs px-space-lg py-2.5 rounded-lg bg-primary-container hover:bg-emerald-vivid text-on-primary font-label-md text-label-md tracking-wide shadow-sm hover:-translate-y-0.5 transition-all"
+              className="hidden md:inline-flex items-center justify-center gap-space-xs px-space-lg py-2.5 rounded-lg bg-primary-container hover:bg-emerald-vivid text-on-primary font-label-md text-label-md tracking-wide shadow-sm hover:-translate-y-0.5 transition-all whitespace-nowrap shrink-0"
               href="#enquire-section"
             >
               <span>Enquire Now</span>
               <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
             </a>
-            <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm">
+            <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center shadow-sm shrink-0">
               <span className="material-symbols-outlined text-on-primary text-[18px]">person</span>
             </div>
             <button

@@ -180,10 +180,11 @@ main { display: block; width: 100%; padding-top: 5rem; }
 footer > div { max-width: 1320px; margin-left: auto; margin-right: auto; }
 
 /* Responsive nav fallbacks (mirror hidden / xl:flex / xl:hidden etc.) */
-header nav { display: none; }
+header nav { display: none; flex-wrap: nowrap; }
+header nav a { white-space: nowrap; flex-shrink: 0; }
 @media (min-width: 1280px) {
   header nav { display: flex !important; }
-  #mobile-menu-btn { display: none !important; }
+  header button { display: none !important; }
 }
 
 /* Images: never overflow, keep aspect, hide broken gracefully */
