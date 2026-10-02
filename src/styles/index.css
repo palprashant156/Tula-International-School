@@ -1,0 +1,219 @@
+/* Base */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  overscroll-behavior: none;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  background: #faf8ff;
+  color: #131b2e;
+  overflow-x: hidden;
+}
+main > :first-child { margin-top: 0 !important; }
+main > :last-child { margin-bottom: 0 !important; }
+
+::-webkit-scrollbar { display: none; }
+
+@media (pointer: fine) {
+  .custom-cursor {
+    pointer-events: none;
+    position: fixed;
+    z-index: 9999;
+    transition: transform 0.1s ease-out;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* ------------------------------------------------------------------
+   Fallback utilities mirroring the Stitch tailwind.config.
+   These guarantee header/nav/footer alignment even if the Tailwind
+   Play CDN is slow or blocked. Values match index.html config.
+------------------------------------------------------------------- */
+:root {
+  --surface: #faf8ff;
+  --surface-card: #FFFFFF;
+  --surface-parchment: #F9FAF8;
+  --surface-container: #eaedff;
+  --surface-container-high: #e2e7ff;
+  --surface-container-low: #f2f3ff;
+  --surface-dim: #d2d9f4;
+  --primary: #004220;
+  --primary-container: #165b32;
+  --on-primary: #ffffff;
+  --on-surface: #131b2e;
+  --on-surface-variant: #404941;
+  --secondary: #835500;
+  --secondary-container: #feae2c;
+  --secondary-fixed: #ffddb4;
+  --emerald-deep: #0E381F;
+  --emerald-vivid: #1E7B44;
+  --amber-soft: #FEF3C7;
+  --text-muted: #475569;
+  --border-tactile: #E2E8F0;
+  --inverse-surface: #283044;
+  --surface-variant: #dae2fd;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2.5rem;
+  --margin: 3rem;
+  --margin-mobile: 1.25rem;
+}
+
+/* Colors */
+.bg-surface { background-color: var(--surface); }
+.bg-surface-card { background-color: var(--surface-card); }
+.bg-surface-parchment { background-color: var(--surface-parchment); }
+.bg-surface-container { background-color: var(--surface-container); }
+.bg-surface-container-high { background-color: var(--surface-container-high); }
+.bg-surface-container-low { background-color: var(--surface-container-low); }
+.bg-surface-dim { background-color: var(--surface-dim); }
+.bg-primary { background-color: var(--primary); }
+.bg-primary-container { background-color: var(--primary-container); }
+.bg-emerald-deep { background-color: var(--emerald-deep); }
+.bg-secondary-container { background-color: var(--secondary-container); }
+.bg-amber-soft { background-color: var(--amber-soft); }
+.bg-surface\/90 { background-color: rgba(250, 248, 255, 0.9); }
+.bg-surface-card\/10 { background-color: rgba(255, 255, 255, 0.1); }
+.bg-surface-card\/15 { background-color: rgba(255, 255, 255, 0.15); }
+.bg-inverse-surface\/40 { background-color: rgba(40, 48, 68, 0.4); }
+.bg-inverse-surface\/60 { background-color: rgba(40, 48, 68, 0.6); }
+.bg-secondary-container\/20 { background-color: rgba(254, 174, 44, 0.2); }
+.bg-primary\/10 { background-color: rgba(0, 66, 32, 0.1); }
+.bg-primary\/5 { background-color: rgba(0, 66, 32, 0.05); }
+.bg-emerald-vivid\/10 { background-color: rgba(30, 123, 68, 0.1); }
+
+.text-primary { color: var(--primary); }
+.text-primary-container { color: var(--primary-container); }
+.text-on-primary { color: var(--on-primary); }
+.text-on-surface { color: var(--on-surface); }
+.text-on-surface-variant { color: var(--on-surface-variant); }
+.text-secondary { color: var(--secondary); }
+.text-secondary-container { color: var(--secondary-container); }
+.text-secondary-fixed { color: var(--secondary-fixed); }
+.text-emerald-vivid { color: var(--emerald-vivid); }
+.text-text-muted { color: var(--text-muted); }
+.text-surface-container-high { color: var(--surface-container-high); }
+.text-surface-container-highest { color: #dae2fd; }
+.text-inverse-surface { color: var(--inverse-surface); }
+.text-surface-container-high\/80 { color: rgba(226, 231, 255, 0.8); }
+.text-surface-container-high\/90 { color: rgba(226, 231, 255, 0.9); }
+
+.border-border-tactile { border-color: var(--border-tactile); }
+.border-primary-container\/40 { border-color: rgba(22, 91, 50, 0.4); }
+.accent-primary-container { accent-color: var(--primary-container); }
+
+/* Spacing */
+.p-space-xs { padding: var(--space-xs); }
+.p-space-sm { padding: var(--space-sm); }
+.p-space-md { padding: var(--space-md); }
+.p-space-lg { padding: var(--space-lg); }
+.p-space-xl { padding: var(--space-xl); }
+.p-margin-mobile { padding: var(--margin-mobile); }
+.px-margin-mobile { padding-left: var(--margin-mobile); padding-right: var(--margin-mobile); }
+.px-space-lg { padding-left: var(--space-lg); padding-right: var(--space-lg); }
+.py-space-xl { padding-top: var(--space-xl); padding-bottom: var(--space-xl); }
+.pt-space-xs { padding-top: var(--space-xs); }
+.pt-space-sm { padding-top: var(--space-sm); }
+.pt-space-md { padding-top: var(--space-md); }
+.pt-space-lg { padding-top: var(--space-lg); }
+.pt-space-xl { padding-top: var(--space-xl); }
+.pb-space-xs { padding-bottom: var(--space-xs); }
+.pb-space-sm { padding-bottom: var(--space-sm); }
+.pb-space-lg { padding-bottom: var(--space-lg); }
+.pb-space-xl { padding-bottom: var(--space-xl); }
+.gap-space-xs { gap: var(--space-xs); }
+.gap-space-sm { gap: var(--space-sm); }
+.gap-space-md { gap: var(--space-md); }
+.gap-space-lg { gap: var(--space-lg); }
+.gap-space-xl { gap: var(--space-xl); }
+.mt-space-lg { margin-top: var(--space-lg); }
+@media (min-width: 1024px) {
+  .lg\:px-margin { padding-left: var(--margin); padding-right: var(--margin); }
+  .lg\:p-space-xl { padding: var(--space-xl); }
+}
+
+/* Typography */
+.font-display, .font-headline-lg, .font-headline-md, .font-headline-sm,
+.font-body-lg, .font-body-md, .font-body-sm,
+.font-label-lg, .font-label-md, .font-label-caps, .font-stat-metric {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+}
+.font-quote-editorial { font-family: 'Noto Serif', Georgia, serif; }
+.text-display { font-size: clamp(2.25rem, 5vw, 3.5rem); line-height: 1.15; font-weight: 800; letter-spacing: -0.03em; }
+.text-display-mobile { font-size: 2.375rem; line-height: 2.75rem; font-weight: 800; }
+.text-headline-lg { font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 1.2; font-weight: 700; letter-spacing: -0.02em; }
+.text-headline-md { font-size: 1.75rem; line-height: 2.25rem; font-weight: 700; }
+.text-headline-sm { font-size: 1.375rem; line-height: 1.875rem; font-weight: 600; }
+.text-body-lg { font-size: 1.125rem; line-height: 1.75rem; }
+.text-body-md { font-size: 1rem; line-height: 1.5rem; }
+.text-body-sm { font-size: 0.875rem; line-height: 1.25rem; }
+.text-label-lg { font-size: 0.9375rem; line-height: 1.25rem; font-weight: 600; }
+.text-label-md { font-size: 0.8125rem; line-height: 1.125rem; font-weight: 600; }
+.text-label-caps { font-size: 0.6875rem; line-height: 1rem; font-weight: 700; letter-spacing: 0.08em; }
+.text-quote-editorial-mobile { font-size: 1.125rem; line-height: 1.875rem; font-family: 'Noto Serif', Georgia, serif; }
+.text-stat-metric { font-size: 3rem; line-height: 3.25rem; font-weight: 800; }
+
+/* ------------------------------------------------------------------
+   Structural alignment: header / navbar / footer
+------------------------------------------------------------------- */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 40;
+  background: rgba(250, 248, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+header > div {
+  max-width: 1320px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+main { display: block; width: 100%; padding-top: 5rem; }
+footer > div { max-width: 1320px; margin-left: auto; margin-right: auto; }
+
+/* Responsive nav fallbacks (mirror hidden / xl:flex / xl:hidden etc.) */
+header nav { display: none; }
+@media (min-width: 1280px) {
+  header nav { display: flex !important; }
+  #mobile-menu-btn { display: none !important; }
+}
+
+/* Images: never overflow, keep aspect, hide broken gracefully */
+img {
+  max-width: 100%;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+img[src="/logo.png"] {
+  height: 2.75rem;
+  width: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+footer img[src="/logo.png"] { height: 3rem; }
+
+/* Background-image sections need a fallback tone + min height so
+   nothing collapses while remote art loads */
+.bg-cover { background-size: cover; }
+.bg-center { background-position: center; }
+section { position: relative; }
+
+/* Material symbols */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 1;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  flex-shrink: 0;
+}
